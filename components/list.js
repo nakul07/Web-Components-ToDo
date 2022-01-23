@@ -2,7 +2,7 @@ const template = document.createElement("template");
 template.innerHTML = `
 <style>
    div{
-    width: 560px;
+    width: 460px;
     height: 50px;
     padding: 12px 20px;
     box-sizing: border-box;
