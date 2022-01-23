@@ -1,24 +1,27 @@
 const template = document.createElement("template");
 template.innerHTML = `
 <style>
-    button{
-    background-color:red;
+button{
+    background-color: #4CAF50; /* Green */
     border: none;
     border-radius: 3px;
     color: white;
     padding: 10px 22px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    }
+}
+button:hover{
+    background-color: #003300;
+}
 </style>
-<div class = "delete-btn">
-    <button id = "delete">&times</button>
+<div class = "add-btn">
+    <button id = "add">Add</button>
 </div>
 
 `;
-export class deleteBtn extends HTMLElement {
+export class addBtn extends HTMLElement {
   constructor() {
     super();
     //shadow dom
@@ -26,4 +29,4 @@ export class deleteBtn extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
-window.customElements.define(`delete-btn`, deleteBtn);
+window.customElements.define(`add-btn`, addBtn);

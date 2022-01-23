@@ -13,7 +13,7 @@ textarea{
 }
 </style>
 <div class = "input-tasks">
-<textarea id="todoIn" placeholder="Add here" rows="2" cols="50"></textarea>
+<textarea id="todoIn" placeholder="Add here" rows="2" cols="40"></textarea>
 </div>
 
 `;
