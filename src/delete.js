@@ -1,5 +1,18 @@
 const template = document.createElement("template");
 template.innerHTML = `
+<style>
+    button{
+    background-color:red;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+</style>
 <div class = "delete-btn">
     <button id = "delete">&times</button>
 </div>

@@ -1,7 +1,19 @@
 const template = document.createElement("template");
 template.innerHTML = `
+<style>
+textarea{
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+</style>
 <div class = "input-tasks">
-<textarea id="todoIn" name="" rows="2" cols="50">Add here</textarea>
+<textarea id="todoIn" placeholder="Add here" rows="2" cols="50"></textarea>
 </div>
 
 `;

@@ -1,5 +1,11 @@
 const template = document.createElement("template");
 template.innerHTML = `
+<style>
+h3{
+    color: green;
+    font-size: 25px;
+}
+</style>
 <div class = "todo-app">
 
     <h3></h3>
@@ -31,6 +37,10 @@ class todoApp extends HTMLElement {
   }
 
   addItems() {
+    if (this.textArea.shadowRoot.querySelector("#todoIn").value == "") {
+      alert("Empty Field");
+      return;
+    }
     this.tasks.push([this.textArea.shadowRoot.querySelector("#todoIn").value]);
     this.count++;
     let list = new listItems();
@@ -38,6 +48,8 @@ class todoApp extends HTMLElement {
     this.shadowRoot.appendChild(list);
     let deleteBtn1 = new deleteBtn();
     this.shadowRoot.appendChild(deleteBtn1);
+    this.textArea.shadowRoot.querySelector("#todoIn").value = "";
+
     deleteBtn1.addEventListener("click", () => {
       list.style.display = "none";
       deleteBtn1.style.display = "none";
